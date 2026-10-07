@@ -1,47 +1,54 @@
 # Controle de Medicamentos
 
-![Abaixo está uma demonstração do funcionamento da aplicação em execução.](./.docs/ControledeMedicamentos.gif)
-
 ## Projeto
 
-Desenvolvido durante o curso Backend da [Academia do Programador](https://www.academiadoprogramador.net) 2026
+O Controle de Medicamentos é um sistema web desenvolvido para auxiliar no gerenciamento de medicamentos e dos recursos de uma unidade de saúde. O sistema centraliza informações sobre fornecedores, medicamentos, pacientes e funcionários, além de permitir o controle das movimentações de estoque.
 
-## Introdução
+A aplicação possui módulos para gerenciamento de fornecedores, medicamentos, pacientes e funcionários, permitindo cadastrar, visualizar, editar e excluir registros. Também conta com um módulo de estoque responsável pelo controle das entradas e saídas de medicamentos, mantendo a quantidade disponível atualizada.
 
-Este projeto é um sistema de controle de medicamentos desenvolvido em C#. O objetivo é facilitar o cadastro de fornecedores, medicamentos, pacientes e funcionários, além de controlar a entrada e a saída de medicamentos do estoque.
-
-O sistema foi desenvolvido em aplicação Console e utiliza arquivos JSON para salvar os dados, permitindo que as informações sejam mantidas mesmo após fechar o programa.
+O projeto possui regras de negócio para garantir a integridade das informações, como a validação de identificadores únicos, o controle da disponibilidade dos medicamentos e a verificação do estoque antes das requisições de saída, facilitando o acompanhamento e a organização dos medicamentos.
 
 ## Funcionalidades
 
-O sistema possui as seguintes funcionalidades:
+### Fornecedores
 
-- Cadastro, edição, visualização e exclusão de fornecedores.
-- Cadastro, edição, visualização e exclusão de medicamentos.
-- Cadastro, edição, visualização e exclusão de pacientes.
-- Cadastro, edição, visualização e exclusão de funcionários.
-- Registro de requisições de entrada de medicamentos no estoque.
-- Registro de requisições de saída de medicamentos para pacientes.
-- Controle automático da quantidade de medicamentos em estoque.
-- Validação dos dados informados durante os cadastros.
-- Persistência dos dados em arquivos JSON.
+- Cadastro, visualização, edição e exclusão
+- Validação de CNPJ único
 
-## Como utilizar
+### Medicamentos
 
-1. Clone o repositório ou baixe o código fonte.
-2. Abra o terminal ou o prompt de comando e navegue até a pasta raiz
-3. Utilize o comando abaixo para restaurar as dependências do projeto.
+- Cadastro e gerenciamento de medicamentos
+- Controle da quantidade em estoque
+- Associação com fornecedores
+- Identificação de medicamentos com menos de 20 unidades
+- Atualização da quantidade quando o medicamento já está cadastrado
 
-   ```bash
-   dotnet restore
-   ```
+### Pacientes
 
-4. Para executar o projeto compilando em tempo real
+- Cadastro, visualização, edição e exclusão
+- Validação de CPF e Cartão do SUS
+- Validação de Cartão do SUS único
 
-   ```bash
-   dotnet run --project ControleDeMedicamentos.WebApp
-   ```
+### Funcionários
 
-## Requisitos
+- Cadastro, visualização, edição e exclusão
+- Validação de CPF único
 
-- .NET 10.0 SDK
+### Controle de Estoque
+
+- Registro e visualização de requisições de entrada
+- Atualização automática do estoque nas entradas
+- Registro e visualização de requisições de saída
+- Associação das saídas aos pacientes e medicamentos
+- Verificação da quantidade disponível antes da saída
+- Atualização automática do estoque após as saídas
+
+### Tecnologias utilizadas
+C#
+ASP.NET Core MVC
+Razor / CSHTML
+Bootstrap
+SQL Server
+Entity Framework Core
+
+Desenvolvido durante o curso Backend da [Academia do Programador](https://www.academiadoprogramador.net) 2026
