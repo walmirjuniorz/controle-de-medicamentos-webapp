@@ -44,11 +44,11 @@ O projeto possui regras de negócio para garantir a integridade das informaçõe
 - Atualização automática do estoque após as saídas
 
 ### Tecnologias utilizadas
-C#
-ASP.NET Core MVC
-Razor / CSHTML
-Bootstrap
-SQL Server
-Entity Framework Core
+- C#
+- ASP.NET Core MVC
+- Razor / CSHTML
+- Bootstrap
+- SQL Server
+- Entity Framework Core
 
 Desenvolvido durante o curso Backend da [Academia do Programador](https://www.academiadoprogramador.net) 2026
